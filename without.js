@@ -17,6 +17,15 @@ const eqArrays = function (array1, array2) {
   }
 };
 
+//Function to check array using helper funtion eqArrays and log the message with input array values
+const assertArraysEqual = function (array1, array2) {
+  if (eqArrays(array1, array2)) {
+    console.log(`No Items found to remove as [${array1}] === [${array2}]`);
+  } else {
+    console.log(`Items to be removed from source are: [${without(array1, array2)}]`);
+  }
+};
+
 const without = function (source, itemToRemove) {
   let itemRemoveArr = [];
   for (let i = 0; i < source.length; i++) {
@@ -25,15 +34,6 @@ const without = function (source, itemToRemove) {
     }
   }
   return itemRemoveArr;
-};
-
-//Function to check array using helper funtion eqArrays and log the message with input array values
-const assertArraysEqual = function (array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(`No Items found to remove as [${array1}] === [${array2}]`);
-  } else {
-    console.log(`Items to be removed from source are: [${without(array1, array2)}]`);
-  }
 };
 
 //Test Run
