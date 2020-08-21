@@ -1,4 +1,4 @@
-//Helper Function that compare the values of two arrays
+//Helper Function that compare two arrays
 const eqArrays = function (array1, array2) {
   let flagLength = 0, flagType = 0, flagValue = 0;
   if (array1.length !== array2.length) {
@@ -28,16 +28,16 @@ const eqArrays = function (array1, array2) {
   }
 };
 
-//Function to check array using helper funtion eqArrays and log the appropriate message
+//Test Exection Function to check array using helper funtion eqArrays and log the appropriate message
 const assertArraysEqual = function (array1, array2) {
   if (eqArrays(array1, array2) === 'Equal') {
-    console.log(`✅✅✅Assertion Passed: ${array1} === ${array2}`);
+    console.log(`✅✅✅Assertion Passed: [${array1}] === [${array2}]`);
   } else if (eqArrays(array1, array2) === 'flagType') {
-    console.log(`🛑🛑🛑Assertion Failed: Datatype is not same for input values`);
+    console.log(`🛑🛑🛑Assertion Failed: Datatype of Values is not same for input Arrays: [${array1}] === [${array2}]`);
   } else if (eqArrays(array1, array2) === 'flagValue') {
-    console.log(`🛑🛑🛑Assertion Failed: Value is different in two input arrays`);
+    console.log(`🛑🛑🛑Assertion Failed: Value is different in two input arrays: [${array1}] === [${array2}]`);
   } else if (eqArrays(array1, array2) === 'flagLength') {
-    console.log(`🛑🛑🛑Assertion Failed: Length of two input arrays is different`);
+    console.log(`🛑🛑🛑Assertion Failed: Length of two input arrays is different: [${array1}] === [${array2}]`);
   }
 };
 
