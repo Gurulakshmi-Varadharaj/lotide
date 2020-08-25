@@ -1,12 +1,3 @@
-//Function to compare the actual and expected result and log to the terminal
-const assertEqual = function (eqArrays, expected) {
-  if (eqArrays === expected) {
-    console.log(`✅✅✅Assertion Passed: "${eqArrays}" === "${expected}"`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: "${eqArrays}" !== "${expected}"`);
-  }
-};
-
 //Helper Function that compare the values of two arrays
 const eqArrays = function (array1, array2) {
   let flagFalse = 0;
@@ -26,8 +17,4 @@ const eqArrays = function (array1, array2) {
   }
 };
 
-// Test Run
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => true
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); // => false
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
+module.exports = eqArrays;
